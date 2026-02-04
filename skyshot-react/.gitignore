@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cleanup / temp
+*_snapshot.*
+*.tmp
+temp/
+drafts/
+*.orig

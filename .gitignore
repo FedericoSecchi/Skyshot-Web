@@ -12,3 +12,11 @@ Video/*.MOV
 .Spotlight-V100
 .Trashes
 
+# Cleanup / temp
+*.log
+*_snapshot.*
+*.tmp
+temp/
+drafts/
+*.orig
+
