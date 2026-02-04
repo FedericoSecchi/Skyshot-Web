@@ -62,8 +62,9 @@ const galleryImages = [
   { src: assetPath('fotos/58-orange-sunset-over-the-mountains.jpg'), alt: 'Orange sunset over the mountains' },
 ]
 
-function WorkSection({ onImageClick }) {
+function WorkSection({ images: imagesProp, onImageClick }) {
   const sectionRef = useRef(null)
+  const images = imagesProp ?? galleryImages
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -112,7 +113,7 @@ function WorkSection({ onImageClick }) {
       </h2>
       <div style={{ flex: 1, minHeight: 0, width: '100%', height: '100%', margin: 0, padding: 0 }}>
         <DomeGallery 
-          images={galleryImages}
+          images={images}
           fit={gallerySettings.fit}
           minRadius={gallerySettings.minRadius}
           maxRadius={gallerySettings.maxRadius}
