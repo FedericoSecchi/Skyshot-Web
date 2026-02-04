@@ -57,6 +57,22 @@
   right: 1rem;
 }
 
+@media (max-width: 768px) {
+  .lightbox-prev,
+  .lightbox-next {
+    display: none;
+  }
+}
+
+.lightbox-swipe-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+
 .lightbox-fullscreen {
   position: fixed;
   bottom: 1rem;

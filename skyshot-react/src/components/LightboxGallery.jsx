@@ -1,11 +1,18 @@
 // LightboxGallery.jsx
 import React, { useEffect, useRef, useState } from 'react'
 import ReactDOM from 'react-dom'
+import { useSwipeable } from 'react-swipeable'
 import './LightboxGallery.css'
 
 export default function LightboxGallery({ images, openIndex, onClose, onOpenAt }) {
   const overlayRef = useRef(null)
   const [isFullscreen, setIsFullscreen] = useState(false)
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => onOpenAt((openIndex + 1) % images.length),
+    onSwipedRight: () => onOpenAt((openIndex - 1 + images.length) % images.length),
+    trackMouse: false,
+  })
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -92,7 +99,9 @@ export default function LightboxGallery({ images, openIndex, onClose, onOpenAt }
       >
         {isFullscreen ? '🔙' : '🖥️'}
       </button>
-      <img className="lightbox-image" src={src} alt={alt} />
+      <div className="lightbox-swipe-area" {...swipeHandlers}>
+        <img className="lightbox-image" src={src} alt={alt} />
+      </div>
     </div>,
     document.body
   )
