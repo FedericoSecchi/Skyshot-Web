@@ -32,7 +32,7 @@ jobs:
       - name: Build static site
         run: |
           cd skyshot-react
-          npm install --legacy-peer-deps
+          npm ci
           npm run build
 
       - name: Upload artifact
