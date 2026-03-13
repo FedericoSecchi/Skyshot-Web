@@ -3,14 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://federicosecchi.github.io/Skyshot-Web/",
+  "homepage": "https://skyshot.space",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "generate:seo": "node scripts/generate_seo_pages.js"
   },
   "dependencies": {
     "@use-gesture/react": "^10.3.1",

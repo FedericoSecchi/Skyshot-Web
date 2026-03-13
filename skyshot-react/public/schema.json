@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SkyShot",
+  "url": "https://skyshot.space",
+  "logo": "https://skyshot.space/assets/skyshot.png",
+  "sameAs": [
+    "https://instagram.com/skyshot.lab"
+  ]
+}
