@@ -381,7 +381,7 @@ function App() {
 
       <footer className="footer">
         <p>© SkyShot Lab. Aerial & Outdoor Visuals.</p>
-        <p className="footer-credit">Diseñado por <a href="https://somoskosmos.com" target="_blank" rel="noopener noreferrer">somoskosmos</a></p>
+        <p className="footer-credit">Designed by <a href="https://somoskosmos.com" target="_blank" rel="noopener noreferrer">somoskosmos</a></p>
       </footer>
 
       {lightboxOpenIndex !== null && (
